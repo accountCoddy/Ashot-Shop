@@ -12,7 +12,9 @@ async function GetData(){
     // console.log(json);
     let convertedData =  CovertToObject(json.values)
     console.log(convertedData);
-    CreateCard(convertedData[0])
+    convertedData.forEach(function(product){
+        CreateCard(product)
+    })
 }
 
 GetData()
